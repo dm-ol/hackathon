@@ -1,1 +1,2 @@
-# hackathon
+# Hackathon
+Test repository for the hackathon 
