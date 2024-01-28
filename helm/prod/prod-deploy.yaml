@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibot
+  namespace: ibot-prod
+spec:
+  selector:
+    matchLabels:
+      app: ibot
+  template:
+    metadata:
+      labels:
+        app: ibot
+    spec:
+      containers:
+        - name: ibot
+          image: ghcr.io/k3ilona/ibot:1.0.0 # {"$imagepolicy": "flux-system:ilona-bot"}
+          imagePullPolicy: IfNotPresent
